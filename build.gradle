@@ -1,0 +1,54 @@
+buildscript {
+  repositories {
+    maven { url 'https://nexusnew.dart/content/repositories/snapshots/' }
+    maven { url 'https://nexusnew.dart/content/repositories/releases' }
+    maven { url 'https://nexusnew.dart/content/groups/public/' }
+    maven { url 'https://nexusnew.dart/content/repositories/central/' }
+  }
+  dependencies {
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.1.60"
+  }
+}
+
+group 'johnson.dev'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'kotlin'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+  maven { url 'https://nexusnew.dart/content/repositories/snapshots/' }
+  maven { url 'https://nexusnew.dart/content/repositories/releases' }
+  maven { url 'https://nexusnew.dart/content/groups/public/' }
+  maven { url 'https://nexusnew.dart/content/repositories/central/' }
+}
+
+dependencies {
+  compile(
+    "org.jetbrains.kotlin:kotlin-stdlib-jre8:1.1.60",
+    "org.jetbrains.kotlin:kotlin-runtime:1.1.60",
+
+    "javax.servlet:javax.servlet-api:3.1.0",
+
+    "org.slf4j:slf4j-api:1.7.25",
+    "org.slf4j:slf4j-log4j12:1.7.25",
+
+    'org.glassfish.jersey.core:jersey-common:2.26',
+    'org.glassfish.jersey.inject:jersey-hk2:2.26',
+    "org.glassfish.jersey.containers:jersey-container-servlet-core:2.26",
+    "org.glassfish.jersey.containers:jersey-container-servlet:2.26",
+
+    "com.fasterxml.jackson.core:jackson-core:2.9.2",
+    "com.fasterxml.jackson.core:jackson-annotations:2.9.2",
+    "com.fasterxml.jackson.core:jackson-databind:2.9.2",
+    "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.9.2",
+    "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.9.2"
+  )
+}
+
+compileKotlin {
+  kotlinOptions.jvmTarget = "1.8"
+}

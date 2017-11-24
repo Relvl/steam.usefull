@@ -1,0 +1,15 @@
+.idea/
+target/
+out/
+build/
+
+*.iml
+*.ipr
+*.iws
+
+/nbactions.xml/bin/
+.project
+.classpath
+.settings/
+*nbactions.xml
+*.netbeans*
