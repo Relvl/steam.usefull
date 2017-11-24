@@ -1,6 +1,7 @@
 package johnson.steam.usefull.api
 
 import com.fasterxml.jackson.annotation.JsonProperty
+import johnson.steam.usefull.steam.model.SteamGame
 import javax.annotation.ManagedBean
 import javax.inject.Singleton
 import javax.servlet.http.HttpServletRequest
@@ -26,6 +27,8 @@ class GamesEndpoint {
     @Path("{gameId}")
     @Produces(MediaType.APPLICATION_JSON)
     fun getLoadGame(@PathParam("gameId") @DefaultValue("0") gameId: Int, @Context request: HttpServletRequest): IResponse {
+
+        SteamGame.updateGameFromSteam(gameId)
 
         return object : IResponse {
             @JsonProperty

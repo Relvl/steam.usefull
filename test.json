@@ -1,0 +1,232 @@
+{
+    "331870": {
+        "success": true,
+        "data": {
+            "type": "game",
+            "name": "AER Memories of Old",
+            "steam_appid": 331870,
+            "required_age": 0,
+            "is_free": false,
+            "controller_support": "full",
+            "dlc": [
+                699290
+            ],
+            "detailed_description": "<img src=\"http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/extras\/steamworks_AER_aboutGame_header_test01.png?t=1510140600\" ><br><br>\u0414\u0440\u0435\u0432\u043d\u0438\u0435 \u0431\u043e\u0433\u0438 \u0437\u0430\u0431\u044b\u0442\u044b, \u0438\u0445 \u0438\u043c\u0435\u043d\u0430 \u0441\u0442\u0435\u0440\u0442\u044b \u0441\u043e\u0431\u044b\u0442\u0438\u044f\u043c\u0438, \u0447\u0442\u043e \u043d\u0435\u043a\u043e\u0433\u0434\u0430 \u0441\u043e\u0442\u0440\u044f\u0441\u0430\u043b\u0438 \u043c\u0438\u0440, \u043d\u043e \u043e\u0441\u0442\u0430\u0432\u0438\u043b\u0438 \u043f\u043e\u0441\u043b\u0435 \u0441\u0435\u0431\u044f \u043b\u0438\u0448\u044c \u0440\u0430\u0437\u0440\u043e\u0437\u043d\u0435\u043d\u043d\u044b\u0435 \u043b\u0435\u0442\u0430\u044e\u0449\u0438\u0435 \u043e\u0441\u0442\u0440\u043e\u0432\u0430. \u041d\u043e \u0441\u0435\u0439\u0447\u0430\u0441 \u043d\u0430\u0434 \u044d\u0442\u0438\u043c \u0442\u0430\u0438\u043d\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u043c \u043c\u0438\u0440\u043e\u043c \u0441 \u0435\u0433\u043e \u0431\u0435\u0441\u043a\u0440\u0430\u0439\u043d\u0438\u043c\u0438 \u043d\u0435\u0431\u0435\u0441\u0430\u043c\u0438, \u043a\u043e\u043b\u043e\u0440\u0438\u0442\u043d\u044b\u043c\u0438 \u043e\u0441\u0442\u0440\u043e\u0432\u0430\u043c\u0438 \u0438 \u0434\u0440\u0435\u0432\u043d\u0438\u043c\u0438 \u0440\u0443\u0438\u043d\u0430\u043c\u0438 \u043d\u0430\u0432\u0438\u0441\u043b\u0430 \u0443\u0433\u0440\u043e\u0437\u0430 \u043f\u043e\u0433\u0440\u0443\u0436\u0435\u043d\u0438\u044f \u0432\u043e \u0442\u044c\u043c\u0443. \u0422\u0435\u0431\u0435 \u043f\u0440\u0435\u0434\u0441\u0442\u043e\u0438\u0442 \u0441\u043e\u0432\u0435\u0440\u0448\u0438\u0442\u044c \u043f\u0430\u043b\u043e\u043c\u043d\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0432 \u0441\u0442\u0440\u0430\u043d\u0443 \u0431\u043e\u0433\u043e\u0432, \u0438\u0431\u043e \u0434\u0440\u0443\u0433\u0438\u0445 \u043c\u0435\u0442\u0430\u043c\u043e\u0440\u0444\u043e\u0432 \u043f\u043e\u0447\u0442\u0438 \u043d\u0435 \u043e\u0441\u0442\u0430\u043b\u043e\u0441\u044c. \u041e\u0442\u043a\u0440\u043e\u0439 \u0442\u0430\u0439\u043d\u044b, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043f\u043e\u043c\u043e\u0433\u0443\u0442 \u0442\u0435\u0431\u0435 \u0441\u043f\u0430\u0441\u0442\u0438 \u0432\u0441\u0435\u043b\u0435\u043d\u043d\u0443\u044e.<br>\t<br><ul class=\"bb_ul\">\t<li>\t\u041b\u0435\u0442\u0430\u0439 \u0438 \u0438\u0441\u0441\u043b\u0435\u0434\u0443\u0439 \u043c\u0438\u0440, \u043f\u0440\u0435\u0432\u0440\u0430\u0449\u0430\u044f\u0441\u044c \u0432 \u043f\u0442\u0438\u0446\u0443 \u043a\u043e\u0433\u0434\u0430 \u0437\u0430\u0445\u043e\u0447\u0435\u0448\u044c.<br><\/li><li>\t\u041e\u0433\u0440\u043e\u043c\u043d\u0430\u044f \u043e\u0442\u043a\u0440\u044b\u0442\u0430\u044f \u0432\u0441\u0435\u043b\u0435\u043d\u043d\u0430\u044f, \u043f\u043e\u043b\u043d\u0430\u044f \u0442\u0430\u0439\u043d \u0438 \u043d\u0430\u0445\u043e\u0434\u043e\u043a.<br><\/li><li>\t\u0412 \u0441\u0432\u043e\u0435\u043c \u043f\u0430\u043b\u043e\u043c\u043d\u0438\u0447\u0435\u0441\u0442\u0432\u0435 \u0438\u0441\u0441\u043b\u0435\u0434\u0443\u0439 \u0437\u0430\u0442\u0435\u0440\u044f\u043d\u043d\u044b\u0435 \u0445\u0440\u0430\u043c\u044b, \u0440\u0435\u0448\u0430\u0439 \u043c\u043d\u043e\u0433\u043e\u0447\u0438\u0441\u043b\u0435\u043d\u043d\u044b\u0435 \u0437\u0430\u0433\u0430\u0434\u043a\u0438 \u0438 \u0433\u043e\u043b\u043e\u0432\u043e\u043b\u043e\u043c\u043a\u0438.<br><\/li><li>\t\u041f\u043e\u0442\u0440\u044f\u0441\u0430\u044e\u0449\u0430\u044f \u0430\u0442\u043c\u043e\u0441\u0444\u0435\u0440\u0430, \u043a\u0440\u0430\u0441\u043e\u0447\u043d\u0430\u044f \u0433\u0440\u0430\u0444\u0438\u043a\u0430 \u0432 \u0441\u0442\u0438\u043b\u0435 \u043c\u0438\u043d\u0438\u043c\u0430\u043b\u0438\u0437\u043c\u0430 \u0438 \u0437\u0430\u0432\u043e\u0440\u0430\u0436\u0438\u0432\u0430\u044e\u0449\u0438\u0439 \u0430\u043d\u0442\u0443\u0440\u0430\u0436.<\/li><\/ul>",
+            "about_the_game": "<img src=\"http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/extras\/steamworks_AER_aboutGame_header_test01.png?t=1510140600\" ><br><br>\u0414\u0440\u0435\u0432\u043d\u0438\u0435 \u0431\u043e\u0433\u0438 \u0437\u0430\u0431\u044b\u0442\u044b, \u0438\u0445 \u0438\u043c\u0435\u043d\u0430 \u0441\u0442\u0435\u0440\u0442\u044b \u0441\u043e\u0431\u044b\u0442\u0438\u044f\u043c\u0438, \u0447\u0442\u043e \u043d\u0435\u043a\u043e\u0433\u0434\u0430 \u0441\u043e\u0442\u0440\u044f\u0441\u0430\u043b\u0438 \u043c\u0438\u0440, \u043d\u043e \u043e\u0441\u0442\u0430\u0432\u0438\u043b\u0438 \u043f\u043e\u0441\u043b\u0435 \u0441\u0435\u0431\u044f \u043b\u0438\u0448\u044c \u0440\u0430\u0437\u0440\u043e\u0437\u043d\u0435\u043d\u043d\u044b\u0435 \u043b\u0435\u0442\u0430\u044e\u0449\u0438\u0435 \u043e\u0441\u0442\u0440\u043e\u0432\u0430. \u041d\u043e \u0441\u0435\u0439\u0447\u0430\u0441 \u043d\u0430\u0434 \u044d\u0442\u0438\u043c \u0442\u0430\u0438\u043d\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u043c \u043c\u0438\u0440\u043e\u043c \u0441 \u0435\u0433\u043e \u0431\u0435\u0441\u043a\u0440\u0430\u0439\u043d\u0438\u043c\u0438 \u043d\u0435\u0431\u0435\u0441\u0430\u043c\u0438, \u043a\u043e\u043b\u043e\u0440\u0438\u0442\u043d\u044b\u043c\u0438 \u043e\u0441\u0442\u0440\u043e\u0432\u0430\u043c\u0438 \u0438 \u0434\u0440\u0435\u0432\u043d\u0438\u043c\u0438 \u0440\u0443\u0438\u043d\u0430\u043c\u0438 \u043d\u0430\u0432\u0438\u0441\u043b\u0430 \u0443\u0433\u0440\u043e\u0437\u0430 \u043f\u043e\u0433\u0440\u0443\u0436\u0435\u043d\u0438\u044f \u0432\u043e \u0442\u044c\u043c\u0443. \u0422\u0435\u0431\u0435 \u043f\u0440\u0435\u0434\u0441\u0442\u043e\u0438\u0442 \u0441\u043e\u0432\u0435\u0440\u0448\u0438\u0442\u044c \u043f\u0430\u043b\u043e\u043c\u043d\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0432 \u0441\u0442\u0440\u0430\u043d\u0443 \u0431\u043e\u0433\u043e\u0432, \u0438\u0431\u043e \u0434\u0440\u0443\u0433\u0438\u0445 \u043c\u0435\u0442\u0430\u043c\u043e\u0440\u0444\u043e\u0432 \u043f\u043e\u0447\u0442\u0438 \u043d\u0435 \u043e\u0441\u0442\u0430\u043b\u043e\u0441\u044c. \u041e\u0442\u043a\u0440\u043e\u0439 \u0442\u0430\u0439\u043d\u044b, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043f\u043e\u043c\u043e\u0433\u0443\u0442 \u0442\u0435\u0431\u0435 \u0441\u043f\u0430\u0441\u0442\u0438 \u0432\u0441\u0435\u043b\u0435\u043d\u043d\u0443\u044e.<br>\t<br><ul class=\"bb_ul\">\t<li>\t\u041b\u0435\u0442\u0430\u0439 \u0438 \u0438\u0441\u0441\u043b\u0435\u0434\u0443\u0439 \u043c\u0438\u0440, \u043f\u0440\u0435\u0432\u0440\u0430\u0449\u0430\u044f\u0441\u044c \u0432 \u043f\u0442\u0438\u0446\u0443 \u043a\u043e\u0433\u0434\u0430 \u0437\u0430\u0445\u043e\u0447\u0435\u0448\u044c.<br><\/li><li>\t\u041e\u0433\u0440\u043e\u043c\u043d\u0430\u044f \u043e\u0442\u043a\u0440\u044b\u0442\u0430\u044f \u0432\u0441\u0435\u043b\u0435\u043d\u043d\u0430\u044f, \u043f\u043e\u043b\u043d\u0430\u044f \u0442\u0430\u0439\u043d \u0438 \u043d\u0430\u0445\u043e\u0434\u043e\u043a.<br><\/li><li>\t\u0412 \u0441\u0432\u043e\u0435\u043c \u043f\u0430\u043b\u043e\u043c\u043d\u0438\u0447\u0435\u0441\u0442\u0432\u0435 \u0438\u0441\u0441\u043b\u0435\u0434\u0443\u0439 \u0437\u0430\u0442\u0435\u0440\u044f\u043d\u043d\u044b\u0435 \u0445\u0440\u0430\u043c\u044b, \u0440\u0435\u0448\u0430\u0439 \u043c\u043d\u043e\u0433\u043e\u0447\u0438\u0441\u043b\u0435\u043d\u043d\u044b\u0435 \u0437\u0430\u0433\u0430\u0434\u043a\u0438 \u0438 \u0433\u043e\u043b\u043e\u0432\u043e\u043b\u043e\u043c\u043a\u0438.<br><\/li><li>\t\u041f\u043e\u0442\u0440\u044f\u0441\u0430\u044e\u0449\u0430\u044f \u0430\u0442\u043c\u043e\u0441\u0444\u0435\u0440\u0430, \u043a\u0440\u0430\u0441\u043e\u0447\u043d\u0430\u044f \u0433\u0440\u0430\u0444\u0438\u043a\u0430 \u0432 \u0441\u0442\u0438\u043b\u0435 \u043c\u0438\u043d\u0438\u043c\u0430\u043b\u0438\u0437\u043c\u0430 \u0438 \u0437\u0430\u0432\u043e\u0440\u0430\u0436\u0438\u0432\u0430\u044e\u0449\u0438\u0439 \u0430\u043d\u0442\u0443\u0440\u0430\u0436.<\/li><\/ul>",
+            "short_description": "\u041e\u0431\u0435\u0440\u043d\u0438\u0441\u044c \u043f\u0442\u0438\u0446\u0435\u0439 \u0438 \u043b\u0435\u0442\u0438 \u2014 \u0438\u0441\u0441\u043b\u0435\u0434\u0443\u0439 \u043a\u0440\u0430\u0441\u043e\u0447\u043d\u044b\u0439 \u043c\u0438\u0440 \u0434\u0440\u0435\u0439\u0444\u0443\u044e\u0449\u0438\u0445 \u043f\u043e \u043d\u0435\u0431\u0443 \u043e\u0441\u0442\u0440\u043e\u0432\u043e\u0432. \u0421\u043f\u0443\u0441\u043a\u0430\u0439\u0441\u044f \u0432 \u0437\u0430\u0442\u0435\u0440\u044f\u043d\u043d\u044b\u0435 \u0434\u0440\u0435\u0432\u043d\u0438\u0435 \u0440\u0443\u0438\u043d\u044b, \u0433\u0434\u0435 \u043a\u0430\u0436\u0434\u044b\u0439 \u0448\u0430\u0433 \u043f\u0440\u0438\u0431\u043b\u0438\u0436\u0430\u0435\u0442 \u0442\u0435\u0431\u044f \u043a \u043a\u043e\u043d\u0446\u0443 \u0441\u0432\u0435\u0442\u0430.",
+            "supported_languages": "\u0430\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u0438\u0439, \u043d\u0435\u043c\u0435\u0446\u043a\u0438\u0439, \u0438\u0441\u043f\u0430\u043d\u0441\u043a\u0438\u0439, \u0444\u0440\u0430\u043d\u0446\u0443\u0437\u0441\u043a\u0438\u0439, \u044f\u043f\u043e\u043d\u0441\u043a\u0438\u0439, \u043a\u043e\u0440\u0435\u0439\u0441\u043a\u0438\u0439, \u0431\u0440\u0430\u0437\u0438\u043b\u044c\u0441\u043a\u0438\u0439 \u043f\u043e\u0440\u0442\u0443\u0433\u0430\u043b\u044c\u0441\u043a\u0438\u0439, \u0440\u0443\u0441\u0441\u043a\u0438\u0439, \u043a\u0438\u0442\u0430\u0439\u0441\u043a\u0438\u0439 (\u0443\u043f\u0440.), \u0438\u0442\u0430\u043b\u044c\u044f\u043d\u0441\u043a\u0438\u0439, \u043a\u0438\u0442\u0430\u0439\u0441\u043a\u0438\u0439 (\u0442\u0440\u0430\u0434.), \u043f\u043e\u043b\u044c\u0441\u043a\u0438\u0439",
+            "reviews": "\u201cAER Memories of Old is an adventure game in the truest sense. Lots of games let you explore a world, but where most focus on the reward waiting at the finish line, Aer is all about the journey.\u201d<br><a href=\"http:\/\/www.pcgamer.com\/turn-into-a-bird-and-explore-a-shattered-world-in-this-immaculate-puzzle-game\/\" target=\"_blank\" rel=\"noreferrer\"  >PC Gamer<\/a><br><br>\u201cWith gentle music, appealing visuals and a majestically simple flight mechanic, AER is as pleasant a journey as I first expected it to be\u201d<br><a href=\"https:\/\/steamcommunity.com\/linkfilter\/?url=http:\/\/www.mirror.co.uk\/tech\/aer-memories-old-review-breath-11378700#ICID=sharebar_twitter\" target=\"_blank\" rel=\"noopener\"  >Mirror<\/a><br><br>\u201cI had a wonderful time with AER Memories of Old. The visuals are perfect, it\u2019s deliciously compact, and there really is something quite wonderful about being able to take to the skies and fly without a care.\u201d<br><a href=\"https:\/\/steamcommunity.com\/linkfilter\/?url=https:\/\/gamecritics.com\/brad-gallaway\/aer-memories-of-old-review\/\" target=\"_blank\" rel=\"noopener\"  >Gamecritics<\/a><br>",
+            "header_image": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/header.jpg?t=1510140600",
+            "website": "http:\/\/forgottenkey.se\/",
+            "pc_requirements": {
+                "minimum": "<strong>\u041c\u0438\u043d\u0438\u043c\u0430\u043b\u044c\u043d\u044b\u0435:<\/strong><br><ul class=\"bb_ul\"><li><strong>\u041e\u0421:<\/strong> Win 7, 8, 10, 64bit<br><\/li><li><strong>\u041f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0440:<\/strong> 3 GHz Dual Core CPU<br><\/li><li><strong>\u041e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430\u044f \u043f\u0430\u043c\u044f\u0442\u044c:<\/strong> 4 GB \u041e\u0417\u0423<br><\/li><li><strong>\u0412\u0438\u0434\u0435\u043e\u043a\u0430\u0440\u0442\u0430:<\/strong> GeForce GTX 560, AMD HD 6870<br><\/li><li><strong>DirectX:<\/strong> \u0412\u0435\u0440\u0441\u0438\u0438 11<br><\/li><li><strong>\u041c\u0435\u0441\u0442\u043e \u043d\u0430 \u0434\u0438\u0441\u043a\u0435:<\/strong> 3 GB<br><\/li><li><strong>\u0417\u0432\u0443\u043a\u043e\u0432\u0430\u044f \u043a\u0430\u0440\u0442\u0430:<\/strong> DirectX 9.0c compatible sound card with latest drivers<\/li><\/ul>",
+                "recommended": "<strong>\u0420\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u043e\u0432\u0430\u043d\u043d\u044b\u0435:<\/strong><br><ul class=\"bb_ul\"><li><strong>\u041e\u0421:<\/strong> Win 7, 8, 10, 64bit<br><\/li><li><strong>\u041f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0440:<\/strong> 3GHz Quad Core CPU<br><\/li><li><strong>\u041e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430\u044f \u043f\u0430\u043c\u044f\u0442\u044c:<\/strong> 4 GB \u041e\u0417\u0423<br><\/li><li><strong>\u0412\u0438\u0434\u0435\u043e\u043a\u0430\u0440\u0442\u0430:<\/strong> GeForce GTX 660TI, AMD HD 7800 series<br><\/li><li><strong>DirectX:<\/strong> \u0412\u0435\u0440\u0441\u0438\u0438 11<br><\/li><li><strong>\u041c\u0435\u0441\u0442\u043e \u043d\u0430 \u0434\u0438\u0441\u043a\u0435:<\/strong> 3 GB<br><\/li><li><strong>\u0417\u0432\u0443\u043a\u043e\u0432\u0430\u044f \u043a\u0430\u0440\u0442\u0430:<\/strong> DirectX 9.0c compatible sound card with latest drivers<\/li><\/ul>"
+            },
+            "mac_requirements": {
+                "minimum": "<strong>\u041c\u0438\u043d\u0438\u043c\u0430\u043b\u044c\u043d\u044b\u0435:<\/strong><br><ul class=\"bb_ul\"><li><strong>\u041e\u0421:<\/strong> Mac OSX 10.10<br><\/li><li><strong>\u041f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0440:<\/strong> 3GHz Dual Core CPU<br><\/li><li><strong>\u041e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430\u044f \u043f\u0430\u043c\u044f\u0442\u044c:<\/strong> 4 GB \u041e\u0417\u0423<br><\/li><li><strong>\u0412\u0438\u0434\u0435\u043e\u043a\u0430\u0440\u0442\u0430:<\/strong> Intel Iris 550<br><\/li><li><strong>\u041c\u0435\u0441\u0442\u043e \u043d\u0430 \u0434\u0438\u0441\u043a\u0435:<\/strong> 3 GB<br><\/li><li><strong>\u0417\u0432\u0443\u043a\u043e\u0432\u0430\u044f \u043a\u0430\u0440\u0442\u0430:<\/strong> 16 bit<\/li><\/ul>",
+                "recommended": "<strong>\u0420\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u043e\u0432\u0430\u043d\u043d\u044b\u0435:<\/strong><br><ul class=\"bb_ul\"><li><strong>\u041e\u0421:<\/strong> Mac OSX 10.12<br><\/li><li><strong>\u041f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0440:<\/strong> 3GHz Quad Core CPU<br><\/li><li><strong>\u041e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430\u044f \u043f\u0430\u043c\u044f\u0442\u044c:<\/strong> 4 GB \u041e\u0417\u0423<br><\/li><li><strong>\u0412\u0438\u0434\u0435\u043e\u043a\u0430\u0440\u0442\u0430:<\/strong> GeForce GTX 660TI \/ AMD HD 7800 series with 2 GB VRAM<br><\/li><li><strong>\u041c\u0435\u0441\u0442\u043e \u043d\u0430 \u0434\u0438\u0441\u043a\u0435:<\/strong> 3 GB<br><\/li><li><strong>\u0417\u0432\u0443\u043a\u043e\u0432\u0430\u044f \u043a\u0430\u0440\u0442\u0430:<\/strong> 16 bit<\/li><\/ul>"
+            },
+            "linux_requirements": {
+                "minimum": "<strong>\u041c\u0438\u043d\u0438\u043c\u0430\u043b\u044c\u043d\u044b\u0435:<\/strong><br><ul class=\"bb_ul\"><li><strong>\u041e\u0421:<\/strong> Ubuntu 14.04 or newer<br><\/li><li><strong>\u041f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0440:<\/strong> 3GHz Dual Core CPU<br><\/li><li><strong>\u041e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430\u044f \u043f\u0430\u043c\u044f\u0442\u044c:<\/strong> 4 GB \u041e\u0417\u0423<br><\/li><li><strong>\u0412\u0438\u0434\u0435\u043e\u043a\u0430\u0440\u0442\u0430:<\/strong> GeForce GTX 560 \/ AMD HD 6870 with at least 1 GB VRAM and proprietary drivers, latest OpenGL driver<br><\/li><li><strong>\u041c\u0435\u0441\u0442\u043e \u043d\u0430 \u0434\u0438\u0441\u043a\u0435:<\/strong> 3 GB<br><\/li><li><strong>\u0417\u0432\u0443\u043a\u043e\u0432\u0430\u044f \u043a\u0430\u0440\u0442\u0430:<\/strong> Sound Card with latest drivers<\/li><\/ul>",
+                "recommended": "<strong>\u0420\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u043e\u0432\u0430\u043d\u043d\u044b\u0435:<\/strong><br><ul class=\"bb_ul\"><li><strong>\u041e\u0421:<\/strong> Ubuntu 16.04<br><\/li><li><strong>\u041f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0440:<\/strong> 3GHz Quad Core CPU<br><\/li><li><strong>\u041e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430\u044f \u043f\u0430\u043c\u044f\u0442\u044c:<\/strong> 4 GB \u041e\u0417\u0423<br><\/li><li><strong>\u0412\u0438\u0434\u0435\u043e\u043a\u0430\u0440\u0442\u0430:<\/strong> GeForce GTX 670 \/ AMD HD 7870 series with 2 GB VRAM and proprietary drivers, latest OpenGL driver<br><\/li><li><strong>\u041c\u0435\u0441\u0442\u043e \u043d\u0430 \u0434\u0438\u0441\u043a\u0435:<\/strong> 3 GB<br><\/li><li><strong>\u0417\u0432\u0443\u043a\u043e\u0432\u0430\u044f \u043a\u0430\u0440\u0442\u0430:<\/strong> Sound Card with latest drivers<\/li><\/ul>"
+            },
+            "legal_notice": "\u00a9 2017 Daedalic Entertainment GmbH and Forgotten Key AB.<br \/>\r\nDaedalic-logo is a trademark of Daedalic Entertainment GmbH, Germany.<br \/>\r\nAER Memories of Old is a trademark of Forgotten Key AB, Sweden.<br \/>\r\nDeveloped by Forgotten Key. All rights reserved.",
+            "developers": [
+                "Forgotten Key"
+            ],
+            "publishers": [
+                "Daedalic Entertainment"
+            ],
+            "price_overview": {
+                "currency": "RUB",
+                "initial": 34900,
+                "final": 34900,
+                "discount_percent": 0
+            },
+            "packages": [
+                54073
+            ],
+            "package_groups": [
+                {
+                    "name": "default",
+                    "title": "\u041a\u0443\u043f\u0438\u0442\u044c AER Memories of Old",
+                    "description": "",
+                    "selection_text": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u043f\u043e\u0441\u043e\u0431 \u043f\u043e\u043a\u0443\u043f\u043a\u0438",
+                    "save_text": "",
+                    "display_type": 0,
+                    "is_recurring_subscription": "false",
+                    "subs": [
+                        {
+                            "packageid": 54073,
+                            "percent_savings_text": "",
+                            "percent_savings": 0,
+                            "option_text": "AER - 349 p\u0443\u0431.",
+                            "option_description": "",
+                            "can_get_free_license": "0",
+                            "is_free_license": false,
+                            "price_in_cents_with_discount": 34900
+                        }
+                    ]
+                }
+            ],
+            "platforms": {
+                "windows": true,
+                "mac": true,
+                "linux": true
+            },
+            "categories": [
+                {
+                    "id": 2,
+                    "description": "\u0414\u043b\u044f \u043e\u0434\u043d\u043e\u0433\u043e \u0438\u0433\u0440\u043e\u043a\u0430"
+                },
+                {
+                    "id": 22,
+                    "description": "\u0414\u043e\u0441\u0442\u0438\u0436\u0435\u043d\u0438\u044f Steam"
+                },
+                {
+                    "id": 28,
+                    "description": "\u041a\u043e\u043d\u0442\u0440\u043e\u043b\u043b\u0435\u0440 (\u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e)"
+                },
+                {
+                    "id": 29,
+                    "description": "\u041a\u043e\u043b\u043b\u0435\u043a\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u043a\u0430\u0440\u0442\u043e\u0447\u043a\u0438"
+                },
+                {
+                    "id": 23,
+                    "description": "Steam Cloud"
+                }
+            ],
+            "genres": [
+                {
+                    "id": "25",
+                    "description": "\u041f\u0440\u0438\u043a\u043b\u044e\u0447\u0435\u043d\u0447\u0435\u0441\u043a\u0438\u0435 \u0438\u0433\u0440\u044b"
+                },
+                {
+                    "id": "23",
+                    "description": "\u0418\u043d\u0434\u0438"
+                }
+            ],
+            "screenshots": [
+                {
+                    "id": 0,
+                    "path_thumbnail": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_56970595be307d16cb9fbde3fd568309517c7ff5.600x338.jpg?t=1510140600",
+                    "path_full": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_56970595be307d16cb9fbde3fd568309517c7ff5.1920x1080.jpg?t=1510140600"
+                },
+                {
+                    "id": 1,
+                    "path_thumbnail": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_4d0f45f7a272047bc82390a7494d57bc9c64e0cd.600x338.jpg?t=1510140600",
+                    "path_full": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_4d0f45f7a272047bc82390a7494d57bc9c64e0cd.1920x1080.jpg?t=1510140600"
+                },
+                {
+                    "id": 2,
+                    "path_thumbnail": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_6974d7b6e92ecf5bbad56b7a51c76e5c5874a88b.600x338.jpg?t=1510140600",
+                    "path_full": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_6974d7b6e92ecf5bbad56b7a51c76e5c5874a88b.1920x1080.jpg?t=1510140600"
+                },
+                {
+                    "id": 3,
+                    "path_thumbnail": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_522d18c5161d01d2f0cc646fed561ccc83a5c477.600x338.jpg?t=1510140600",
+                    "path_full": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_522d18c5161d01d2f0cc646fed561ccc83a5c477.1920x1080.jpg?t=1510140600"
+                },
+                {
+                    "id": 4,
+                    "path_thumbnail": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_ac3af1088145a903dc4e51bc26db6622ee17ffd3.600x338.jpg?t=1510140600",
+                    "path_full": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_ac3af1088145a903dc4e51bc26db6622ee17ffd3.1920x1080.jpg?t=1510140600"
+                },
+                {
+                    "id": 5,
+                    "path_thumbnail": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_2f64497e2ba07bf791ca50cd8dc52e355e523e95.600x338.jpg?t=1510140600",
+                    "path_full": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_2f64497e2ba07bf791ca50cd8dc52e355e523e95.1920x1080.jpg?t=1510140600"
+                },
+                {
+                    "id": 6,
+                    "path_thumbnail": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_8565740d92842c4a0fdf2c5abfc52d96c7e6ec9a.600x338.jpg?t=1510140600",
+                    "path_full": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_8565740d92842c4a0fdf2c5abfc52d96c7e6ec9a.1920x1080.jpg?t=1510140600"
+                },
+                {
+                    "id": 7,
+                    "path_thumbnail": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_7acfd58316939ba1104f3fc66f1ed2648ab47b80.600x338.jpg?t=1510140600",
+                    "path_full": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_7acfd58316939ba1104f3fc66f1ed2648ab47b80.1920x1080.jpg?t=1510140600"
+                },
+                {
+                    "id": 8,
+                    "path_thumbnail": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_c3d5ff6905d3275b1323d7a6b07a1dcb02a5691d.600x338.jpg?t=1510140600",
+                    "path_full": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_c3d5ff6905d3275b1323d7a6b07a1dcb02a5691d.1920x1080.jpg?t=1510140600"
+                },
+                {
+                    "id": 9,
+                    "path_thumbnail": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_7836dde6f7694929082d1aec936441f949a9191c.600x338.jpg?t=1510140600",
+                    "path_full": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/ss_7836dde6f7694929082d1aec936441f949a9191c.1920x1080.jpg?t=1510140600"
+                }
+            ],
+            "movies": [
+                {
+                    "id": 256699264,
+                    "name": "AER Release Trailer",
+                    "thumbnail": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256699264\/movie.293x165.jpg?t=1508947349",
+                    "webm": {
+                        "480": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256699264\/movie480.webm?t=1508947349",
+                        "max": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/256699264\/movie_max.webm?t=1508947349"
+                    },
+                    "highlight": true
+                }
+            ],
+            "recommendations": {
+                "total": 129
+            },
+            "achievements": {
+                "total": 20,
+                "highlighted": [
+                    {
+                        "name": "\u0421\u0432\u0435\u0442 \u0432 \u043a\u043e\u043d\u0446\u0435 \u0442\u043e\u043d\u043d\u0435\u043b\u044f",
+                        "path": "http:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/331870\/5344b31c8e94002087ba2c943cfcc219f7d01262.jpg"
+                    },
+                    {
+                        "name": "\u041b\u044e\u0434\u0441\u043a\u0438\u0435 \u043d\u0435\u0431\u0435\u0441\u0430",
+                        "path": "http:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/331870\/d2c279ac63231addfc19d37571f5ed4dcaaba68c.jpg"
+                    },
+                    {
+                        "name": "\u0417\u043d\u0430\u043d\u0438\u0435 - \u0441\u0438\u043b\u0430",
+                        "path": "http:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/331870\/f1c7b598469189e0d4cffa69f6d7a00e52a5f623.jpg"
+                    },
+                    {
+                        "name": "\u041b\u0435\u0434\u044f\u043d\u043e\u0439 \u043c\u0430\u0432\u0437\u043e\u043b\u0435\u0439",
+                        "path": "http:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/331870\/4409ba095f1059f0f6bd15025e1221ff951edac5.jpg"
+                    },
+                    {
+                        "name": "\u042d\u043a\u0432\u0438\u043b\u0438\u0431\u0440\u0438\u0443\u043c",
+                        "path": "http:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/331870\/79353f365b4558807aa61e6ec2df0cb23a4ce6fe.jpg"
+                    },
+                    {
+                        "name": "\u0411\u0435-\u0435-\u0435 \u0438\u0437 \u043f\u0440\u043e\u0448\u043b\u043e\u0433\u043e",
+                        "path": "http:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/331870\/f11a2eede5dea140ed4b54f03ec9b260a72c3b12.jpg"
+                    },
+                    {
+                        "name": "\u0421\u043b\u0443\u0448\u0430\u044f \u0434\u0443\u0445\u043e\u0432",
+                        "path": "http:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/331870\/3713e4f8a25bb93e3c3a85b9b3a9c887d945c05f.jpg"
+                    },
+                    {
+                        "name": "\u041a\u0430\u0440\u0442\u043e\u0433\u0440\u0430\u0444",
+                        "path": "http:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/331870\/00ed79592d680e2dfebb194f094b6cbf0d0605a2.jpg"
+                    },
+                    {
+                        "name": "\u041c\u0430\u043c\u0430?",
+                        "path": "http:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/331870\/54f06bf9db3f84ea3fd2244fdf448ca1919562a9.jpg"
+                    },
+                    {
+                        "name": "\u041f\u0440\u044f\u0442\u043a\u0438",
+                        "path": "http:\/\/cdn.akamai.steamstatic.com\/steamcommunity\/public\/images\/apps\/331870\/b4fff076e5c0036f8c6ef340abb2e1c5b60ea4e7.jpg"
+                    }
+                ]
+            },
+            "release_date": {
+                "coming_soon": false,
+                "date": "25 \u043e\u043a\u0442. 2017"
+            },
+            "support_info": {
+                "url": "http:\/\/www.daedalicsupport.com",
+                "email": ""
+            },
+            "background": "http:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/331870\/page_bg_generated_v6b.jpg?t=1510140600"
+        }
+    }
+}
