@@ -15,3 +15,4 @@ build/
 *.netbeans*
 
 /test.*
+node_modules/
