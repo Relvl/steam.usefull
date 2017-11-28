@@ -1,9 +1,14 @@
 package johnson.steam.usefull.api
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import johnson.steam.usefull.steam.model.SteamGame
+import johnson.steam.usefull.database.Database
+import johnson.steam.usefull.database.GamesDAO
+import johnson.steam.usefull.database.entities.DbGame
+import johnson.steam.usefull.steam.SteamClient
+import johnson.steam.usefull.steam.model.SteamGameSimple
 import javax.annotation.ManagedBean
 import javax.inject.Singleton
+import javax.persistence.EntityManager
 import javax.servlet.http.HttpServletRequest
 import javax.ws.rs.*
 import javax.ws.rs.core.Context
@@ -19,8 +24,11 @@ class GamesEndpoint {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     fun getAllGames(@Context request: HttpServletRequest): IResponse {
-        //throw ApiException(EGeneralApiError.BAD_ARGUMENT)
-        throw Exception("Test exception")
+        val g = DbGame(-1, "Test game")
+        val entityManager: EntityManager = Database.getEntityManager()
+        entityManager.persist(g)
+
+        return object : IResponse {}
     }
 
     @GET
@@ -28,11 +36,26 @@ class GamesEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     fun getLoadGame(@PathParam("gameId") @DefaultValue("0") gameId: Int, @Context request: HttpServletRequest): IResponse {
 
-        SteamGame.updateGameFromSteam(gameId)
+        SteamClient.updateGameFromSteam(gameId)
 
         return object : IResponse {
             @JsonProperty
             var test: Int = gameId
         }
+    }
+
+    @GET
+    @Path("gameList")
+    @Produces(MediaType.APPLICATION_JSON)
+    fun getAllGames(): IResponse {
+
+        val games: List<SteamGameSimple> = SteamClient.loadAllGames()
+        val dbGames: MutableList<DbGame> = ArrayList()
+        for (game in games) {
+            dbGames.add(DbGame(game.appId, game.name))
+        }
+        GamesDAO.addGameBases(dbGames)
+
+        return object : IResponse {}
     }
 }

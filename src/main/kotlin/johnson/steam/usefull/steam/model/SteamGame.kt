@@ -2,17 +2,11 @@ package johnson.steam.usefull.steam.model
 
 import com.fasterxml.jackson.annotation.JsonAnySetter
 import com.fasterxml.jackson.annotation.JsonProperty
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
 import java.util.*
-import java.util.concurrent.TimeUnit
-import javax.ws.rs.client.ClientBuilder
-import javax.ws.rs.client.ClientRequestContext
-import javax.ws.rs.client.ClientRequestFilter
-import javax.ws.rs.core.MediaType
 
 
 /** @author karpov-em on 24.11.2017*/
+//http://api.steampowered.com/ISteamApps/GetAppList/v0002/?key=A02EE4D0F03C51AD8FCBDF5935D08666&format=json
 class SteamGame {
 
     @JsonProperty
@@ -72,6 +66,9 @@ class SteamGame {
     @JsonProperty("publishers")
     private var publishers: List<String> = Collections.emptyList()
 
+    @JsonProperty("demos")
+    private var demos: DemoInfo? = null
+
     @JsonProperty("price_overview")
     private var priceOverview: PriceOverview? = null
 
@@ -81,36 +78,37 @@ class SteamGame {
     @JsonProperty("package_groups")
     private var packageGroups: List<PackageGroup> = Collections.emptyList()
 
-    // TODO@karpov: продолжить
+    @JsonProperty("platforms")
+    private var platforms: PlatformsList? = null
 
+    @JsonProperty("metacritic")
+    private var metacritic: MetacriticData? = null
 
-    // -------------------------------------------------------------------------------------------------
-    companion object {
-        private val LOGGER: Logger = LoggerFactory.getLogger(SteamGame::class.java)
+    @JsonProperty("categories")
+    private var categories: List<Category> = Collections.emptyList()
+    @JsonProperty("genres")
+    private var genres: List<Category> = Collections.emptyList()
 
-        fun updateGameFromSteam(gameId: Int): SteamGame? {
-            val client = ClientBuilder
-                    .newBuilder()
-                    .connectTimeout(5, TimeUnit.SECONDS)
-                    .readTimeout(5, TimeUnit.SECONDS)
-                    .register(LogFilter())
-                    .build()
-            val webTarget = client.target("http://store.steampowered.com/api").path("appdetails").queryParam("appids", gameId)
+    @JsonProperty("screenshots")
+    private var screenshots: List<ScreenshotData> = Collections.emptyList()
 
-            val invocationBuilder = webTarget.request(MediaType.APPLICATION_JSON + ";charset=utf-8")
-            val response = invocationBuilder.get(SteamGameResponse::class.java)
+    @JsonProperty("movies")
+    private var movies: List<MovieData> = Collections.emptyList()
 
-            LOGGER.info("Response reached")
+    @JsonProperty("recommendations")
+    private var recommendations: Recomendations? = null
 
-            return null
-        }
-    }
+    @JsonProperty("achievements")
+    private var achievements: AchievementsList? = null
 
-    class LogFilter : ClientRequestFilter {
-        override fun filter(requestContext: ClientRequestContext?) {
-            LOGGER.info(requestContext?.entity.toString())
-        }
-    }
+    @JsonProperty("release_date")
+    private var releaseDate: ReleaseDate? = null
+
+    @JsonProperty("support_info")
+    private var supportInfo: SupportData? = null
+
+    @JsonProperty("background")
+    private var background: String? = null
 
     class SteamGameResponse {
         @JsonAnySetter
@@ -122,6 +120,7 @@ class SteamGame {
     class SteamGameWrapper {
         @JsonProperty
         private var success: Boolean = false
+
         @JsonProperty
         private var data: SteamGame? = null
     }
