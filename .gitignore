@@ -1,16 +1,9 @@
-.idea/**/*
-target/**/*
-out/**/*
-build/**/*
-node_modules/**/*
+/.idea/**/*
+/target/**/*
+/out/**/*
+/build/**/*
+/node_modules/**/*
 
 *.iml
 *.ipr
 *.iws
-
-/nbactions.xml/bin/
-.project
-.classpath
-.settings/
-*nbactions.xml
-*.netbeans*
