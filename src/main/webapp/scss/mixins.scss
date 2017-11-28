@@ -1,0 +1,32 @@
+@mixin flex($direction) {
+  display: flex;
+  @if ($direction) {
+    flex-direction: unquote($direction);
+  }
+  @content;
+}
+
+@mixin flex-row() {
+  @include flex("row") {
+    @content;
+  }
+}
+
+@mixin flex-col() {
+  @include flex("column") {
+    @content;
+  }
+}
+
+@mixin flex-al-center() {
+  align-items: center;
+}
+
+@mixin flex-just-center() {
+  justify-content: center;
+}
+
+@mixin panel-full() {
+  background-color: #FFF;
+  padding: 10px;
+}

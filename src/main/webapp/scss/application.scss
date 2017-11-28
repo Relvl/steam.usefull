@@ -1,0 +1,41 @@
+@import "variables";
+@import "mixins";
+
+body {
+  @include flex-col();
+  align-items: center;
+  margin: 0;
+  background-color: $bg_color;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+#application {
+  min-width: 960px;
+  margin-top: $top_menu_height + 10px;
+}
+
+.top-menu {
+  @include flex-col();
+  @include flex-just-center();
+  position: absolute;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  min-height: $top_menu_height;
+  background-color: $element_caption;
+  color: $element_caption_text;
+
+  .top-menu_holder {
+    @include flex-row();
+    @include flex-al-center();
+    min-width: 960px;
+  }
+}
+
+.forum-group {
+  @include panel-full();
+}
