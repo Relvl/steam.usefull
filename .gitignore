@@ -2,6 +2,7 @@
 target/
 out/
 build/
+node_modules/
 
 *.iml
 *.ipr
@@ -13,5 +14,3 @@ build/
 .settings/
 *nbactions.xml
 *.netbeans*
-
-/test.*
