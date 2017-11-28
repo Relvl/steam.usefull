@@ -1,0 +1,24 @@
+
+https://steamcommunity.com/openid/login
+    ?openid.ns=         http://specs.openid.net/auth/2.0
+    &openid.mode=       checkid_setup
+    &openid.return_to=  http://thedalokohsclub.com/interface/board/steam.php
+    &openid.realm=      http://thedalokohsclub.com
+    &openid.identity=   http://specs.openid.net/auth/2.0/identifier_select
+    &openid.claimed_id= http://specs.openid.net/auth/2.0/identifier_select
+
+
+http://thedalokohsclub.com/interface/board/steam.php
+    ?openid.ns=             http://specs.openid.net/auth/2.0
+    &openid.mode=           id_res
+    &openid.op_endpoint=    https://steamcommunity.com/openid/login
+    &openid.claimed_id=     http://steamcommunity.com/openid/id/76561198087511877
+    &openid.identity=       http://steamcommunity.com/openid/id/76561198087511877
+    &openid.return_to=      http://thedalokohsclub.com/interface/board/steam.php
+    &openid.response_nonce= 2017-11-28T17:51:23ZDMU1dhMLAzV5M+K4iEJjnY//kbA=
+    &openid.assoc_handle=   1234567890
+    &openid.signed=         signed,op_endpoint,claimed_id,identity,return_to,response_nonce,assoc_handle
+    &openid.sig=            3YRDQhjbmD3keiJy0/iV5zAyoRk=
+
+Мой ключ (времянка): 612343986D22832CE43FD61C08CBF647
+
