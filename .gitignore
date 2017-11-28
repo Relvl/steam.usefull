@@ -1,9 +1,8 @@
-.idea/
-target/
-out/
-build/
-node_modules/
-node_modules/*
+.idea/**/*
+target/**/*
+out/**/*
+build/**/*
+node_modules/**/*
 
 *.iml
 *.ipr
