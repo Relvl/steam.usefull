@@ -1,9 +1,7 @@
 /* Файл настроек Gulp для сборки и имнификации .js, .css Сборку бандла осуществляет Webpack */
 
 const gulp = require("gulp");
-const gulpSync = require("gulp-sync")(gulp);
 const gulpif = require("gulp-if");
-const babel = require("gulp-babel");
 const gutil = require("gulp-util");
 const arrayToPipe = require("multipipe");
 const concat = require("gulp-concat");
@@ -13,16 +11,15 @@ const sass = require("gulp-sass");
 const autoprefixer = require("autoprefixer");
 const postcss = require("gulp-postcss");
 const cssnano = require("cssnano");
-const uglify = require("gulp-uglify");
 const server = require("gulp-server-livereload");
 const webpack = require("webpack");
-const webpackConfig = require('./webpack.config.js');
+const webpackStream = require("webpack-stream");
 
 const _ = require("underscore");
 
 const Options = {
     /** -====================================- Минификация и углификация финальных .css и .js */
-    minify: false,
+    minify: true,
     /** -====================================- Путь к сорцам */
     base: "./src/main/webapp/",
     /** -====================================- Пути к JSX файлам - слежение за изменениями и сборка из них */
@@ -49,6 +46,25 @@ const Options = {
         port: 35730,
         files: ["./**/*.css"]
     },
+
+    babel_config: {
+        presets: [
+            "babel-preset-env",
+            "babel-preset-es2015",
+            "babel-preset-es2016",
+            "babel-preset-es2017",
+            "babel-preset-react",
+            "babel-preset-stage-0",
+            "babel-preset-stage-1",
+            "babel-preset-stage-2",
+            "babel-preset-stage-3",
+            "babel-polyfill"
+        ],
+        plugins: [
+            "transform-decorators-legacy",
+            "transform-es2015-modules-commonjs"
+        ]
+    }
 };
 
 gulp.task("scss-build", function () {
@@ -73,29 +89,11 @@ gulp.task("scss-build", function () {
         .pipe(arrayToPipe(_.map(Options.css_target, (target) => gulp.dest(target).on("data", (file) => file.path.endsWith(".map") ? null : gutil.log("CSS Compiled: " + file.path)))));
 });
 
-gulp.task("jsx-build", function () {
-    gutil.log(gutil.colors.bgGreen(gutil.colors.black("======================= JSX building " + (Options.minify ? gutil.colors.bgRed(gutil.colors.white("[MINIFIED]")) : ""))));
-    return gulp
-        .src(Options.jsx, {cwd: Options.base, base: Options.base})
-        .pipe(plumber())
-        .pipe(sourcemaps.init())
-
-        .pipe(babel()).on("error", (err) => gutil.log("Babel error: ", gutil.colors.red(err.message)))
-        .pipe(gulpif(Options.minify, uglify()))
-        .pipe(concat("application.min.js"))
-
-        .pipe(sourcemaps.write("."))
-        .pipe(plumber.stop())
-        .pipe(arrayToPipe(_.map(Options.js_target, (target) => gulp.dest(target).on("data", (file) => file.path.endsWith(".map") ? null : gutil.log("JS Compiled: " + file.path)))));
-});
-
-gulp.task("all-build", gulpSync.sync(["scss-build", "jsx-build"]));
-
 gulp.task("live-reload", function () {
     gutil.log(
         gutil.colors.bgGreen(gutil.colors.black("LiveReload server: ")),
         Options.live_reload.enabled
-            ? gutil.colors.bgGreen(gutil.colors.black("ENABLED")) + ", use '<script src=\"http://localhost:' + Config.LIVE_RELOAD_PORT + '/livereload.js\" type=\"text/javascript\"></script>'"
+            ? gutil.colors.bgGreen(gutil.colors.black("ENABLED")) + ", use <script src=\"http://localhost:" + Options.live_reload.port + "/livereload.js\" type=\"text/javascript\"></script>"
             : gutil.colors.bgRed(gutil.colors.white("DISABLED"))
     );
     return gulp
@@ -103,7 +101,7 @@ gulp.task("live-reload", function () {
         .pipe(gulpif(Options.live_reload.enabled,
             server({
                 port: 0,
-                log: 'error',
+                log: "error",
                 livereload: {
                     enable: true,
                     port: Options.live_reload.port
@@ -112,10 +110,27 @@ gulp.task("live-reload", function () {
         ));
 });
 
-gulp.task("webpack", function (callback) {
-    webpack(webpackConfig, function (err, stats) {
-        if (err) {throw new gutil.PluginError("webpack", err);}
-        gutil.log("[webpack]", stats.toString({}));
-        callback();
-    });
+gulp.task("wp2", function () {
+    return gulp
+        .src("app/Application.jsx", {cwd: Options.base})
+        .pipe(plumber())
+        .pipe(webpackStream({
+            devtool: "source-map",
+            module: {
+                loaders: [{
+                    test: /.jsx?$/,
+                    loader: "babel-loader",
+                    exclude: /node_modules/,
+                    query: Options.babel_config
+                }]
+            },
+            plugins: _.compact([
+                Options.minify ? new webpack.optimize.UglifyJsPlugin() : null
+            ]),
+            output: {
+                filename: "application" + (Options.minify ? ".min" : "") + ".js"
+            }
+        }))
+        .pipe(plumber.stop())
+        .pipe(gulp.dest(Options.base));
 });

@@ -1,4 +1,4 @@
-import * as React from "react";
+const React = require("react");
 
 class Application extends React.Component {
     render() {
