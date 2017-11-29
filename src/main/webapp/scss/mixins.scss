@@ -6,27 +6,35 @@
   @content;
 }
 
-@mixin flex-row() {
+@mixin flex-row {
   @include flex("row") {
     @content;
   }
 }
 
-@mixin flex-col() {
+@mixin flex-col {
   @include flex("column") {
     @content;
   }
 }
 
-@mixin flex-al-center() {
+@mixin flex-al-center {
   align-items: center;
 }
 
-@mixin flex-just-center() {
+@mixin flex-just-center {
   justify-content: center;
 }
 
-@mixin panel-full() {
+@mixin flex-push-right {
+  margin-left: auto;
+}
+
+@mixin panel-full {
   background-color: #FFF;
   padding: 10px;
+}
+
+@mixin transit-bg-color{
+  transition: background-color 100ms linear;
 }

@@ -12,8 +12,8 @@ $application_with: 960px;
 }
 
 .top-menu {
-  @include flex-col();
-  @include flex-just-center();
+  @include flex-col;
+  @include flex-just-center;
 
   position: absolute;
   align-items: center;
@@ -27,13 +27,42 @@ $application_with: 960px;
   box-shadow: 0 2px 1px rgba(15, 55, 76, .2);
 
   .top-menu_holder {
-    @include flex-row();
-    @include flex-al-center();
+    @include flex-row;
+    @include flex-al-center;
+
     min-width: $application_with;
     max-width: $application_with;
 
     a {
       color: rgba(255, 255, 255, 0.75);
+    }
+  }
+
+  .steam-login-link {
+    @include flex-row;
+    @include transit-bg-color;
+
+    padding-left: 10px;
+
+    &:hover {
+      background-color: #4f5a69;
+    }
+
+    .link-text {
+      @include flex-al-center;
+      @include flex-just-center;
+      :last-child {
+        font-size: 12px;
+      }
+    }
+
+    $icon_size: 40px;
+    svg {
+      @include flex-push-right;
+
+      width: $icon_size;
+      height: $icon_size;
+      margin: 0 $size_s;
     }
   }
 }

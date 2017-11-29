@@ -1,10 +1,11 @@
 const React = require("react");
 const ReactDOM = require("react-dom");
-const AComponent = require("./AComponent.jsx");
+const AComponent = require("./AComponent");
 
 const _ = require("underscore");
 
-const TopMenu = require("./TopMenu.jsx");
+const TopMenu = require("./TopMenu");
+const Crutches = require("./Crutches");
 const RequestExecutor = require("./lib/request-executor");
 
 class Application extends AComponent {
@@ -12,8 +13,12 @@ class Application extends AComponent {
     doRequests() {
         for (let obj = 0; obj < 2; obj++) {
             RequestExecutor.call("/api/game/test", {aaa: String(obj)}, "get")
-                .then((r) => {console.log("APP on response(", obj, "): ", r);})
-                .catch((e) => {console.error("APP on error: ", e, " args: ", arguments);});
+                .then((r) => {
+                    console.log("APP on response(", obj, "): ", r);
+                })
+                .catch((e) => {
+                    console.error("APP on error: ", e, " args: ", arguments);
+                });
         }
     }
 
@@ -38,6 +43,7 @@ class Application extends AComponent {
                     <p onClick={() => this.doRequests()}>CLICK ME!</p>
                 </section>
             </div>
+            <Crutches/>
         </div>;
     }
 }

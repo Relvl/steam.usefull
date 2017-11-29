@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 23);
+/******/ 	return __webpack_require__(__webpack_require__.s = 24);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -70,7 +70,7 @@
 "use strict";
 
 
-var bind = __webpack_require__(18);
+var bind = __webpack_require__(19);
 var isBuffer = __webpack_require__(41);
 
 /*global toString:true*/
@@ -613,9 +613,9 @@ module.exports = emptyFunction;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(24);
-} else {
   module.exports = __webpack_require__(25);
+} else {
+  module.exports = __webpack_require__(26);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
@@ -2449,10 +2449,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(19);
+    adapter = __webpack_require__(20);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(19);
+    adapter = __webpack_require__(20);
   }
   return adapter;
 }
@@ -2542,7 +2542,7 @@ module.exports = defaults;
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(6);
   var warning = __webpack_require__(7);
-  var ReactPropTypesSecret = __webpack_require__(26);
+  var ReactPropTypesSecret = __webpack_require__(27);
   var loggedTypeFailures = {};
 }
 
@@ -2841,7 +2841,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(29);
+var isTextNode = __webpack_require__(30);
 
 /*eslint-disable no-bitwise */
 
@@ -2899,36 +2899,43 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 17 */
+/* 17 */,
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _ = __webpack_require__(8);
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+/** Генерирует валидную закодированную URL строку из полей объекта.
+ * @param {Object} object
+ * @param {String} [url]
+ * @return {string}
+ */
+function ObjectToUrl(object) {
+    var url = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+    var result = "";
+    _.forEach(object, function (value, key) {
+        if (key === "url") {
+            if (!url) {
+                result = value + "?" + result;
+            }
+        } else {
+            result += "&" + key + "=" + encodeURIComponent(String(value));
+        }
+    });
+    if (!!url) {
+        result = url + "?" + result;
+    }
+    return result;
+}
 
-var React = __webpack_require__(3);
-
-var AComponent = function (_React$Component) {
-  _inherits(AComponent, _React$Component);
-
-  function AComponent() {
-    _classCallCheck(this, AComponent);
-
-    return _possibleConstructorReturn(this, (AComponent.__proto__ || Object.getPrototypeOf(AComponent)).apply(this, arguments));
-  }
-
-  return AComponent;
-}(React.Component);
-
-module.exports = AComponent;
+module.exports = ObjectToUrl;
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2946,7 +2953,7 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2957,7 +2964,7 @@ var settle = __webpack_require__(44);
 var buildURL = __webpack_require__(46);
 var parseHeaders = __webpack_require__(47);
 var isURLSameOrigin = __webpack_require__(48);
-var createError = __webpack_require__(20);
+var createError = __webpack_require__(21);
 var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(49);
 
 module.exports = function xhrAdapter(config) {
@@ -3134,7 +3141,7 @@ module.exports = function xhrAdapter(config) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3159,7 +3166,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3171,7 +3178,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3197,7 +3204,7 @@ module.exports = Cancel;
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3212,12 +3219,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var React = __webpack_require__(3);
-var ReactDOM = __webpack_require__(27);
-var AComponent = __webpack_require__(17);
+var ReactDOM = __webpack_require__(28);
+var AComponent = __webpack_require__(60);
 
 var _ = __webpack_require__(8);
 
-var TopMenu = __webpack_require__(36);
+var TopMenu = __webpack_require__(61);
+var Crutches = __webpack_require__(62);
 var RequestExecutor = __webpack_require__(38);
 
 var Application = function (_AComponent) {
@@ -3303,7 +3311,8 @@ var Application = function (_AComponent) {
                             "CLICK ME!"
                         )
                     )
-                )
+                ),
+                React.createElement(Crutches, null)
             );
         }
     }]);
@@ -3314,7 +3323,7 @@ var Application = function (_AComponent) {
 ReactDOM.render(React.createElement(Application, null), document.getElementById("application"));
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3343,7 +3352,7 @@ version:"16.1.1",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{ReactCurren
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4694,7 +4703,7 @@ module.exports = react;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4713,7 +4722,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4751,15 +4760,15 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(28);
+  module.exports = __webpack_require__(29);
 } else {
-  module.exports = __webpack_require__(31);
+  module.exports = __webpack_require__(32);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4993,7 +5002,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:qb,bundleType:0,version:"16.1.1",r
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5008,7 +5017,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:qb,bundleType:0,version:"16.1.1",r
  * @typechecks
  */
 
-var isNode = __webpack_require__(30);
+var isNode = __webpack_require__(31);
 
 /**
  * @param {*} object The object to check.
@@ -5021,7 +5030,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5049,7 +5058,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5081,8 +5090,8 @@ var containsNode = __webpack_require__(15);
 var focusNode = __webpack_require__(16);
 var emptyObject = __webpack_require__(5);
 var checkPropTypes = __webpack_require__(10);
-var hyphenateStyleName = __webpack_require__(32);
-var camelizeStyleName = __webpack_require__(34);
+var hyphenateStyleName = __webpack_require__(33);
+var camelizeStyleName = __webpack_require__(35);
 
 /**
  * WARNING: DO NOT manually require this module.
@@ -20457,7 +20466,7 @@ module.exports = reactDom;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20472,7 +20481,7 @@ module.exports = reactDom;
 
 
 
-var hyphenate = __webpack_require__(33);
+var hyphenate = __webpack_require__(34);
 
 var msPattern = /^ms-/;
 
@@ -20499,7 +20508,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20535,7 +20544,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20550,7 +20559,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(35);
+var camelize = __webpack_require__(36);
 
 var msPattern = /^-ms-/;
 
@@ -20578,7 +20587,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20613,129 +20622,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var React = __webpack_require__(3);
-var AComponent = __webpack_require__(17);
-
-var TopMenu = function (_AComponent) {
-    _inherits(TopMenu, _AComponent);
-
-    function TopMenu() {
-        var _ref;
-
-        var _temp, _this, _ret;
-
-        _classCallCheck(this, TopMenu);
-
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = TopMenu.__proto__ || Object.getPrototypeOf(TopMenu)).call.apply(_ref, [this].concat(args))), _this), _this.getSteamLoginUrl = function () {
-            return __webpack_require__(37)({
-                "url": "https://steamcommunity.com/openid/login",
-                "openid.ns": "http://specs.openid.net/auth/2.0",
-                "openid.mode": "checkid_setup",
-                "openid.return_to": "http://localhost/#steam_login",
-                "openid.realm": "http://localhost/",
-                "openid.identity": "http://specs.openid.net/auth/2.0/identifier_select",
-                "openid.claimed_id": "http://specs.openid.net/auth/2.0/identifier_select"
-            });
-        }, _temp), _possibleConstructorReturn(_this, _ret);
-    }
-
-    _createClass(TopMenu, [{
-        key: "render",
-        value: function render() {
-            // http://localhost/test_steam
-            // openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
-            // openid.mode=id_res | cancel
-            // openid.op_endpoint=https%3A%2F%2Fsteamcommunity.com%2Fopenid%2Flogin
-            // openid.claimed_id=http%3A%2F%2Fsteamcommunity.com%2Fopenid%2Fid%2F76561198087511877 <- Всё, что после http://steamcommunity.com/openid/id/ - это ид залогинившегося
-            // openid.identity=http%3A%2F%2Fsteamcommunity.com%2Fopenid%2Fid%2F76561198087511877 <- Всё, что после http://steamcommunity.com/openid/id/ - это ид залогинившегося
-            // openid.return_to=http%3A%2F%2Flocalhost%2Ftest_steam
-            // openid.response_nonce=2017-11-28T18%3A03%3A50Zp7Y3FPGl7v5xUwl7TzGps6CfVlU%3D
-            // openid.assoc_handle=1234567890
-            // openid.signed=signed%2Cop_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle
-            // openid.sig=OSVCewqd4bn9hQX%2BJiXbs4Bggsw%3D
-
-            //http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=612343986D22832CE43FD61C08CBF647&steamids=76561198087511877
-
-            return React.createElement(
-                "div",
-                { className: "top-menu" },
-                React.createElement(
-                    "div",
-                    { className: "top-menu_holder" },
-                    React.createElement(
-                        "div",
-                        null,
-                        "asdfsdf"
-                    ),
-                    React.createElement(
-                        "a",
-                        { className: "flex-push-right", href: this.getSteamLoginUrl() },
-                        React.createElement("img", { className: "loginTroughtSteam", src: "/images/steam_logo_flat_xs.png" })
-                    )
-                )
-            );
-        }
-    }]);
-
-    return TopMenu;
-}(AComponent);
-
-module.exports = TopMenu;
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(8);
-
-/** Генерирует валидную закодированную URL строку из полей объекта.
- * @param {Object} object
- * @param {String} [url]
- * @return {string}
- */
-function ObjectToUrl(object) {
-    var url = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-    var result = "";
-    _.forEach(object, function (value, key) {
-        if (key === "url") {
-            if (!url) {
-                result = value + "?" + result;
-            }
-        } else {
-            result += "&" + key + "=" + encodeURIComponent(String(value));
-        }
-    });
-    if (!!url) {
-        result = url + "?" + result;
-    }
-    return result;
-}
-
-module.exports = ObjectToUrl;
-
-/***/ }),
+/* 37 */,
 /* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20758,7 +20645,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var axios = __webpack_require__(39);
 var _ = __webpack_require__(8);
-var ObjectToUrl = __webpack_require__(37);
+var ObjectToUrl = __webpack_require__(18);
 
 var makeRequestKey = function makeRequestKey(endpoint, request) {
     return "key_" + endpoint + "_" + JSON.stringify(request);
@@ -20934,7 +20821,7 @@ module.exports = __webpack_require__(40);
 
 
 var utils = __webpack_require__(0);
-var bind = __webpack_require__(18);
+var bind = __webpack_require__(19);
 var Axios = __webpack_require__(42);
 var defaults = __webpack_require__(9);
 
@@ -20969,9 +20856,9 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(22);
+axios.Cancel = __webpack_require__(23);
 axios.CancelToken = __webpack_require__(56);
-axios.isCancel = __webpack_require__(21);
+axios.isCancel = __webpack_require__(22);
 
 // Expose all/spread
 axios.all = function all(promises) {
@@ -21124,7 +21011,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 "use strict";
 
 
-var createError = __webpack_require__(20);
+var createError = __webpack_require__(21);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -21559,7 +21446,7 @@ module.exports = InterceptorManager;
 
 var utils = __webpack_require__(0);
 var transformData = __webpack_require__(53);
-var isCancel = __webpack_require__(21);
+var isCancel = __webpack_require__(22);
 var defaults = __webpack_require__(9);
 var isAbsoluteURL = __webpack_require__(54);
 var combineURLs = __webpack_require__(55);
@@ -21719,7 +21606,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 "use strict";
 
 
-var Cancel = __webpack_require__(22);
+var Cancel = __webpack_require__(23);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -21809,6 +21696,240 @@ module.exports = function spread(callback) {
   };
 };
 
+
+/***/ }),
+/* 58 */,
+/* 59 */,
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(3);
+
+var AComponent = function (_React$Component) {
+  _inherits(AComponent, _React$Component);
+
+  function AComponent() {
+    _classCallCheck(this, AComponent);
+
+    return _possibleConstructorReturn(this, (AComponent.__proto__ || Object.getPrototypeOf(AComponent)).apply(this, arguments));
+  }
+
+  return AComponent;
+}(React.Component);
+
+module.exports = AComponent;
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(3);
+var AComponent = __webpack_require__(60);
+var SvgEmbed = __webpack_require__(63);
+
+var TopMenu = function (_AComponent) {
+    _inherits(TopMenu, _AComponent);
+
+    function TopMenu() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
+        _classCallCheck(this, TopMenu);
+
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = TopMenu.__proto__ || Object.getPrototypeOf(TopMenu)).call.apply(_ref, [this].concat(args))), _this), _this.getSteamLoginUrl = function () {
+            return __webpack_require__(18)({
+                "url": "https://steamcommunity.com/openid/login",
+                "openid.ns": "http://specs.openid.net/auth/2.0",
+                "openid.mode": "checkid_setup",
+                "openid.return_to": "http://localhost/#steam_login",
+                "openid.realm": "http://localhost/",
+                "openid.identity": "http://specs.openid.net/auth/2.0/identifier_select",
+                "openid.claimed_id": "http://specs.openid.net/auth/2.0/identifier_select"
+            });
+        }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(TopMenu, [{
+        key: "render",
+        value: function render() {
+            // http://localhost/test_steam
+            // openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+            // openid.mode=id_res | cancel
+            // openid.op_endpoint=https%3A%2F%2Fsteamcommunity.com%2Fopenid%2Flogin
+            // openid.claimed_id=http%3A%2F%2Fsteamcommunity.com%2Fopenid%2Fid%2F76561198087511877 <- Всё, что после http://steamcommunity.com/openid/id/ - это ид залогинившегося
+            // openid.identity=http%3A%2F%2Fsteamcommunity.com%2Fopenid%2Fid%2F76561198087511877 <- Всё, что после http://steamcommunity.com/openid/id/ - это ид залогинившегося
+            // openid.return_to=http%3A%2F%2Flocalhost%2Ftest_steam
+            // openid.response_nonce=2017-11-28T18%3A03%3A50Zp7Y3FPGl7v5xUwl7TzGps6CfVlU%3D
+            // openid.assoc_handle=1234567890
+            // openid.signed=signed%2Cop_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle
+            // openid.sig=OSVCewqd4bn9hQX%2BJiXbs4Bggsw%3D
+
+            //http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=612343986D22832CE43FD61C08CBF647&steamids=76561198087511877
+
+            return React.createElement(
+                "div",
+                { className: "top-menu" },
+                React.createElement(
+                    "div",
+                    { className: "top-menu_holder" },
+                    React.createElement(
+                        "div",
+                        null,
+                        "asdfsdf"
+                    ),
+                    React.createElement(
+                        "a",
+                        { className: "flex-push-right steam-login-link", href: this.getSteamLoginUrl() },
+                        React.createElement(
+                            "div",
+                            { className: "link-text flex-col" },
+                            "\u0412\u043E\u0439\u0442\u0438",
+                            React.createElement(
+                                "div",
+                                null,
+                                "\u0447\u0435\u0440\u0435\u0437 Steam"
+                            )
+                        ),
+                        React.createElement(SvgEmbed, { src: "/images/collection.svg", id: "steam" })
+                    )
+                )
+            );
+        }
+    }]);
+
+    return TopMenu;
+}(AComponent);
+
+module.exports = TopMenu;
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(3);
+var AComponent = __webpack_require__(60);
+
+var Crutches = function (_AComponent) {
+    _inherits(Crutches, _AComponent);
+
+    function Crutches() {
+        _classCallCheck(this, Crutches);
+
+        return _possibleConstructorReturn(this, (Crutches.__proto__ || Object.getPrototypeOf(Crutches)).apply(this, arguments));
+    }
+
+    _createClass(Crutches, [{
+        key: "render",
+        value: function render() {
+            return React.createElement(
+                "div",
+                null,
+                React.createElement(
+                    "svg",
+                    null,
+                    React.createElement(
+                        "defs",
+                        null,
+                        React.createElement(
+                            "linearGradient",
+                            { id: "steam-gradient", x2: "50%", x1: "50%", y2: "100%" },
+                            React.createElement("stop", { stopColor: "#111D2E", offset: "0" }),
+                            React.createElement("stop", { stopColor: "#051839", offset: ".21248" }),
+                            React.createElement("stop", { stopColor: "#0A1B48", offset: ".40695" }),
+                            React.createElement("stop", { stopColor: "#132E62", offset: ".58110" }),
+                            React.createElement("stop", { stopColor: "#144B7E", offset: ".73760" }),
+                            React.createElement("stop", { stopColor: "#136497", offset: ".87279" }),
+                            React.createElement("stop", { stopColor: "#1387B8", offset: "1" })
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Crutches;
+}(AComponent);
+
+module.exports = Crutches;
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = __webpack_require__(3);
+var AComponent = __webpack_require__(60);
+
+var SvgEmbed = function (_AComponent) {
+    _inherits(SvgEmbed, _AComponent);
+
+    function SvgEmbed() {
+        _classCallCheck(this, SvgEmbed);
+
+        return _possibleConstructorReturn(this, (SvgEmbed.__proto__ || Object.getPrototypeOf(SvgEmbed)).apply(this, arguments));
+    }
+
+    _createClass(SvgEmbed, [{
+        key: "render",
+        value: function render() {
+            return React.createElement(
+                "svg",
+                { fill: this.props.fill },
+                React.createElement("use", { xlinkHref: this.props.src + "#" + this.props.id })
+            );
+        }
+    }]);
+
+    return SvgEmbed;
+}(AComponent);
+
+module.exports = SvgEmbed;
 
 /***/ })
 /******/ ]);

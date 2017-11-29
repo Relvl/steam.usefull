@@ -1,4 +1,14 @@
+@import "mixins";
+@import "variables";
+
+.flex-row {
+  @include flex-row;
+}
+
+.flex-col {
+  @include flex-col;
+}
 
 .flex-push-right {
-  margin-left: auto;
+  @include flex-push-right;
 }

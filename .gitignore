@@ -9,4 +9,4 @@
 *.iml
 *.ipr
 *.iws
-package_lock.json
+package-lock.json

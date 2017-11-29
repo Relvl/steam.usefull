@@ -1,5 +1,6 @@
 const React = require("react");
-const AComponent = require("./AComponent.jsx");
+const AComponent = require("./AComponent.js");
+const SvgEmbed= require("./components/SvgEmbed");
 
 class TopMenu extends AComponent {
 
@@ -31,8 +32,12 @@ class TopMenu extends AComponent {
         return <div className="top-menu">
             <div className="top-menu_holder">
                 <div>asdfsdf</div>
-                <a className="flex-push-right" href={this.getSteamLoginUrl()}>
-                    <img className="loginTroughtSteam" src="/images/steam_logo_flat_xs.png"/>
+                <a className="flex-push-right steam-login-link" href={this.getSteamLoginUrl()}>
+                    <div className="link-text flex-col">
+                        Войти
+                        <div>через Steam</div>
+                    </div>
+                    <SvgEmbed src="/images/collection.svg" id="steam"/>
                 </a>
             </div>
 

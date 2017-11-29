@@ -26,6 +26,14 @@ p {
   margin: 0 0 10px;
   font-size: 15px; }
 
+.flex-row {
+  display: flex;
+  flex-direction: row; }
+
+.flex-col {
+  display: flex;
+  flex-direction: column; }
+
 .flex-push-right {
   margin-left: auto; }
 
@@ -47,7 +55,7 @@ p {
   right: 0;
   top: 0;
   min-height: 40px;
-  background-color: #1B3A65;
+  background-color: #000;
   color: #CCD2DA;
   z-index: 2;
   -webkit-box-shadow: 0 2px 1px rgba(15, 55, 76, 0.2);
@@ -60,5 +68,22 @@ p {
     max-width: 960px; }
     .top-menu .top-menu_holder a {
       color: rgba(255, 255, 255, 0.75); }
+  .top-menu .steam-login-link {
+    display: flex;
+    flex-direction: row;
+    transition: background-color 100ms linear;
+    padding-left: 10px; }
+    .top-menu .steam-login-link:hover {
+      background-color: #4f5a69; }
+    .top-menu .steam-login-link .link-text {
+      align-items: center;
+      justify-content: center; }
+      .top-menu .steam-login-link .link-text :last-child {
+        font-size: 12px; }
+    .top-menu .steam-login-link svg {
+      margin-left: auto;
+      width: 40px;
+      height: 40px;
+      margin: 0 10px; }
 
 /*# sourceMappingURL=application.css.map*/
