@@ -5,8 +5,18 @@ const AComponent = require("./AComponent.jsx");
 const _ = require("underscore");
 
 const TopMenu = require("./TopMenu.jsx");
+const RequestExecutor = require("./lib/request-executor");
 
 class Application extends AComponent {
+
+    doRequests() {
+        for (let obj = 0; obj < 2; obj++) {
+            RequestExecutor.call("/api/game/test", {aaa: String(obj)}, "get")
+                .then((r) => {console.log("APP on response(", obj, "): ", r);})
+                .catch((e) => {console.error("APP on error: ", e, " args: ", arguments);});
+        }
+    }
+
     render() {
         return <div className="page-wrapper">
             <TopMenu/>
@@ -24,9 +34,11 @@ class Application extends AComponent {
                         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
                         id est laborum.</p>
                     <p>Just paragraph!!</p>
+
+                    <p onClick={() => this.doRequests()}>CLICK ME!</p>
                 </section>
             </div>
-        </div>
+        </div>;
     }
 }
 

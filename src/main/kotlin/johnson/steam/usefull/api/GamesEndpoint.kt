@@ -45,6 +45,27 @@ class GamesEndpoint {
     }
 
     @GET
+    @Path("test")
+    @Produces(MediaType.APPLICATION_JSON)
+    fun doTest(): IResponse {
+        return object : IResponse {
+            @JsonProperty
+            var result: String = "test ok"
+        }
+    }
+
+    @POST
+    @Path("test")
+    @Produces(MediaType.APPLICATION_JSON)
+    fun doTestPost(): IResponse {
+        Thread.sleep(3000)
+        return object : IResponse {
+            @JsonProperty
+            var result: String = "test ok"
+        }
+    }
+
+    @GET
     @Path("gameList")
     @Produces(MediaType.APPLICATION_JSON)
     fun getAllGames(): IResponse {

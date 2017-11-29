@@ -5,6 +5,7 @@ enum class EGeneralApiError(private val status: Int, private val message: String
 
     BAD_ARGUMENT(400, "Bad argument"),
     NOT_FOUND(404, "Resource not found"),
+    METHOD_NOT_ALLOWED(405, "Method not allowed"),
 
     GENERAL_SERVER_ERROR(500, "Internal server error");
 
