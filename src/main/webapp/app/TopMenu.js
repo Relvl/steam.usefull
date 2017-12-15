@@ -1,6 +1,6 @@
 const React = require("react");
 const AComponent = require("./AComponent.js");
-const SvgEmbed= require("./components/SvgEmbed");
+const SvgEmbed = require("./components/SvgEmbed");
 
 class TopMenu extends AComponent {
 
@@ -41,7 +41,7 @@ class TopMenu extends AComponent {
                 </a>
             </div>
 
-        </div>
+        </div>;
     }
 }
 
