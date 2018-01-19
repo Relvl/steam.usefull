@@ -1,9 +1,8 @@
-const React = require("react");
-const AComponent = require("./AComponent.js");
+import * as React from "react";
 
-class Crutches extends AComponent {
+class Crutches extends React.Component {
     render() {
-        return <div>
+        return <div className="_crutches_box">
             <svg>
                 <defs>
                     <linearGradient id="steam-gradient" x2="50%" x1="50%" y2="100%">
@@ -21,4 +20,4 @@ class Crutches extends AComponent {
     }
 }
 
-module.exports = Crutches;
+export default Crutches;

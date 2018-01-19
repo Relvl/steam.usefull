@@ -1,12 +1,11 @@
 const React = require("react");
-const AComponent = require("../AComponent");
 
-class SvgEmbed extends AComponent {
+class SvgEmbed extends React.Component {
     render() {
         return <svg fill={this.props.fill}>
             <use xlinkHref={this.props.src + "#" + this.props.id}/>
-        </svg>
+        </svg>;
     }
 }
 
-module.exports = SvgEmbed;
+export default SvgEmbed;

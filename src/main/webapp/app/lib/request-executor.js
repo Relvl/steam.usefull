@@ -29,6 +29,10 @@ class RequestExecutor {
     /** @private */
     __cache = {};
 
+    constructor(){
+        console.log("make RE")/*FIXME Убрать!*/;
+    }
+
     /**
      * @param {string} endpoint
      * @param {Object} request
@@ -126,5 +130,4 @@ RequestExecutor.PendedRequest = class {
     }
 };
 
-const instance = new RequestExecutor();
-module.exports = instance;
+export default new RequestExecutor();

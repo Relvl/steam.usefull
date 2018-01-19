@@ -10,6 +10,7 @@ body {
   align-items: center;
   background-color: $bg_color;
   margin: 0;
+  overflow-y: scroll;
 }
 
 h1, h2, h3, h4 {
@@ -34,3 +35,8 @@ p {
   font-size: $size_s * $size_font_ratio;
 }
 
+._crutches_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

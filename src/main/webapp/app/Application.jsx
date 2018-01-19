@@ -1,51 +1,41 @@
-const React = require("react");
-const ReactDOM = require("react-dom");
-const AComponent = require("./AComponent");
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import {HashRouter, Route, Switch} from 'react-router-dom';
 
-const _ = require("underscore");
+import TopMenu from "./components/TopMenu";
+import Crutches from "./components/Crutches";
 
-const TopMenu = require("./TopMenu");
-const Crutches = require("./Crutches");
-const RequestExecutor = require("./lib/request-executor");
+import Page_404 from "./pageController/pages/technical/404";
+import PageMain from "./pageController/pages/main";
+import PageProfile from "./pageController/pages/profile";
 
-class Application extends AComponent {
+class Application extends React.Component {
 
-    doRequests() {
-        for (let obj = 0; obj < 2; obj++) {
-            RequestExecutor.call("/api/game/test", {aaa: String(obj)}, "get")
-                .then((r) => {
-                    console.log("APP on response(", obj, "): ", r);
-                })
-                .catch((e) => {
-                    console.error("APP on error: ", e, " args: ", arguments);
-                });
-        }
+    constructor() {
+        super();
+    }
+
+    /** @param {HashStruct} hashStruct */
+    onHashChanged(hashStruct) {
+
     }
 
     render() {
         return <div className="page-wrapper">
             <TopMenu/>
-            <div>
-                <section>
-                    <h2>Header!</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                        id est laborum.</p>
-                    <p>Just paragraph!!</p>
-                </section>
-                <section>
-                    <h2>Header!</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                        id est laborum.</p>
-                    <p>Just paragraph!!</p>
 
-                    <p onClick={() => this.doRequests()}>CLICK ME!</p>
-                </section>
-            </div>
+            <Switch>
+                <Route exact path='/' component={PageMain}/>
+                <Route exact path='/main' component={PageMain}/>
+                <Route exact path='/profile' component={PageProfile}/>
+                <Route path='*' component={Page_404}/>
+            </Switch>
+
             <Crutches/>
         </div>;
     }
 }
 
-ReactDOM.render(<Application/>, document.getElementById("application"));
+ReactDOM.render(<HashRouter hashType="noslash"><Application/></HashRouter>, document.getElementById("application"));
+
+export default Application;

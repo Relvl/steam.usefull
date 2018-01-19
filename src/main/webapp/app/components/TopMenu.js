@@ -1,14 +1,14 @@
-const React = require("react");
-const AComponent = require("./AComponent.js");
-const SvgEmbed = require("./components/SvgEmbed");
+import React from "react";
+import SvgEmbed from "./SvgEmbed";
+import {Link} from "react-router-dom";
 
-class TopMenu extends AComponent {
+class TopMenu extends React.Component {
 
-    getSteamLoginUrl = () => require("./lib/object-to-url.js")({
+    getSteamLoginUrl = () => require("../lib/object-to-url.js")({
         "url": "https://steamcommunity.com/openid/login",
         "openid.ns": "http://specs.openid.net/auth/2.0",
         "openid.mode": "checkid_setup",
-        "openid.return_to": "http://localhost/#steam_login",
+        "openid.return_to": "http://localhost:8080/#main?action=steam_login",
         "openid.realm": "http://localhost/",
         "openid.identity": "http://specs.openid.net/auth/2.0/identifier_select",
         "openid.claimed_id": "http://specs.openid.net/auth/2.0/identifier_select",
@@ -32,6 +32,11 @@ class TopMenu extends AComponent {
         return <div className="top-menu">
             <div className="top-menu_holder">
                 <div>asdfsdf</div>
+
+                <Link to="">Home</Link>
+                <Link to="test">Test</Link>
+                <Link to="profile">Profile</Link>
+
                 <a className="flex-push-right steam-login-link" href={this.getSteamLoginUrl()}>
                     <div className="link-text flex-col">
                         Войти
@@ -45,4 +50,4 @@ class TopMenu extends AComponent {
     }
 }
 
-module.exports = TopMenu;
+export default TopMenu;
