@@ -1,3 +1,5 @@
+import _ from "underscore";
+
 class Utils {
 
     /** Метод для создания класса с множественным наследованием.
@@ -30,7 +32,8 @@ class Utils {
     }
 
     /**  */
-    static foo() {}
+    static foo() {
+    }
 
     /**  */
     static ensureFunction(func) {
@@ -48,6 +51,12 @@ Array.prototype.remove = function () {
         }
     }
     return this;
+};
+Array.prototype.compact = function () {
+    return _.compact(this);
+};
+Array.prototype.rest = function () {
+    return _.rest(this);
 };
 
 export default Utils;

@@ -8,6 +8,7 @@ import Crutches from "./components/Crutches";
 import Page_404 from "./pageController/pages/technical/404";
 import PageMain from "./pageController/pages/main";
 import PageProfile from "./pageController/pages/profile";
+import PageGame from "./pageController/pages/game";
 
 class Application extends React.Component {
 
@@ -28,6 +29,7 @@ class Application extends React.Component {
                 <Route exact path='/' component={PageMain}/>
                 <Route exact path='/main' component={PageMain}/>
                 <Route exact path='/profile' component={PageProfile}/>
+                <Route path='/game' component={PageGame}/>
                 <Route path='*' component={Page_404}/>
             </Switch>
 

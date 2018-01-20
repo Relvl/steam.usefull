@@ -1,0 +1,19 @@
+@import "../variables";
+
+img.game_main_image {
+  width: 300px;
+  height: 140px;
+  min-width: $size_xxl;
+  max-width: $size_xxl;
+  min-height: 140px;
+  max-height: 140px;
+  margin-right: $size_m;
+}
+
+.tag_container {
+  flex-wrap: wrap;
+}
+
+.tag_container a {
+  margin-right: $size_xs;
+}

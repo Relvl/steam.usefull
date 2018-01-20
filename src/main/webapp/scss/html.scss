@@ -35,6 +35,10 @@ p {
   font-size: $size_s * $size_font_ratio;
 }
 
+img {
+  height: 100%;
+}
+
 ._crutches_box {
   position: absolute;
   top: 0;
